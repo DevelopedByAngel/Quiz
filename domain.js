@@ -1,39 +1,70 @@
 const domain=(window.location.href).split("=")[1];
+console.log(domain)
 $('#domain').text(domain);
-var name='my_var';
 eval('var dom='+domain);
-$('#domain').after('<input type="submit" value="submit"></form>')
+$('#domain').after('<div id="submitdiv"><input type="submit" value="submit" id="submit"></div></form>')
 dom.map((d,i)=>
 	{
 		$('#domain').after(
-		'<h1 class="question">'+d.question+'</h1>'+
+		'<h3 class="question" id="question'+i+'">'+(dom.length-i)+') '+d.question+'</h3>'+
 		'<fieldset class="options" >'+
-		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[0]+'" required="required"><label for="q'+i+'">'+d.options[0]+'</label></div><br>'+
-		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[1]+'" required="required"><label for="q'+i+'">'+d.options[1]+'</label></div><br>'+
-		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[2]+'" required="required"><label for="q'+i+'">'+d.options[2]+'</label></div><br>'+
+		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[0]+'" ><label for="q'+i+'">'+d.options[0]+'</label></div><br>'+
+		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[1]+'" ><label for="q'+i+'">'+d.options[1]+'</label></div><br>'+
+		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[2]+'" ><label for="q'+i+'">'+d.options[2]+'</label></div><br>'+
 		'</fieldset>'
 		);
 	});
 // $('#domain').after('<form>')
 $("form").on("submit", function(e)
 	{
+		$('#scoreholder').css("display","block");
+		$(document).scrollTop($(document).height()+100); 
+		$('.score').text(' ');
+		$('#scoreholder').html('<img id="scoreimg" width="200" height="200" src="..."><div id="scorediv"><p id="scorepic"></p></div>');
+		$('.option').css('background-color','grey')
+		var score=0;
 		e.preventDefault();
 		dom.map((d,i)=>
 		{
 			if(d.answer===$('input[name=q'+i+']:checked').val())
-			$('input[name=q'+i+']:checked').parent().css('background-color','green');
+			{
+				$('#question'+i).html($('#question'+i).html()+'<span class="score">(1/1)</span>')
+				$('input[name=q'+i+']:checked').parent().css('background-color','#228422');
+				score=score+1;
+			}
 			else
 			{
-			$('input[name=q'+i+']:checked').parent().css('background-color','red');
-			var opt=$('.q'+i);
-			for(var i=0;i<opt.length;i++)
-			{
-				var val=opt[i].childNodes[0]
-				if(val.getAttribute('value')===d.answer)
-					val.parentElement.style.background = 'rgba(76,175,80,0.5)';
-			}
+				$('#question'+i).html($('#question'+i).html()+'<span class="score">(0/1)</span>')
+				$('input[name=q'+i+']:checked').parent().css('background-color','#e27575');
+				var opt=$('.q'+i);
+				for(var i=0;i<opt.length;i++)
+				{
+					var val=opt[i].childNodes[0]
+					if(val.getAttribute('value')===d.answer)
+						val.parentElement.style.background = 'rgba(76,175,80,0.5)';
+				}
+				
 			}
 
+		})
+		
+		$('#scorepic').text(score+'/10');
+		if(score<1)
+		{
+			$('#scoreimg').attr('src','https://media1.tenor.com/images/c60b0c9f441f523e67e64afc52bec690/tenor.gif?itemid=8665326');
 		}
-		)
+		else
+		{
+			$('#scoreimg').attr('src','https://media.tenor.com/images/9fcdecc57f93ff2c8bc4bc0556e98ca8/tenor.gif');
+			
+		}
+		$('#scorepic').after("<div class='button'><button class='btn btn-primary' onclick='window.location.href=window.location.href'>Try again</button><button class='btn btn-primary' onclick='results();'>View Results</button></div>");
+	});
+function results()
+		{
+			document.documentElement.scrollTop = 0;
+		}
+$('.option').click(function()
+	{
+		$(this).children()[0].click();
 	});

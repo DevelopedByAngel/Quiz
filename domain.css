@@ -1,4 +1,131 @@
-.option
+#domain
 {
-	background-color:wheat;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	font-size:3rem;
+	font-family: 'Lobster', cursive;
+}
+.question
+{
+	font-family: 'Roboto Condensed', sans-serif;
+	padding:10px;
+}
+.option 
+{
+	padding:10px;
+	background:grey;
+	border:1px double transparent;
+	border-radius:10px
+}
+.option:hover
+{
+	font-weight:bolder;
+}
+.option label
+{
+	font-family: 'Zilla Slab', serif;
+	font-size:1.5em;
+	color:white;
+}
+.option input
+{
+	margin:10px;
+}
+input[type='radio']:after
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after
+ {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+button,#submit
+{
+	display: inline-block;
+font-weight: 400;
+color: #212529;
+text-align: center;
+vertical-align: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-color: transparent;
+border: 1px solid transparent;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+border-radius: .25rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+color: #fff;
+background-color: #007bff;
+border-color: #007bff;  
+ }
+.button
+{
+	display: flex;
+	justify-content:center;
+}
+.button button
+{
+	margin:5%;
+}
+#scoreholder
+{
+	text-align: center;
+}
+#scoreimg
+{
+	border:1px solid black;
+	border-radius: 50%;
+
+}
+#submitdiv
+{
+	display: flex;
+	justify-content:flex-end;
+}
+#submit
+{
+	width:15%;
+	height:10%;
+	font-size:1.3rem;
+	margin:10px;
+}
+#scorepic
+{
+	font-size: 4rem
+}
+#scoreholder
+{
+	display:none;
+}
+.score
+{
+	color: slategray;
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: 20px;
 }
