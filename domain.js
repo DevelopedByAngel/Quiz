@@ -1,6 +1,14 @@
 const domain=(window.location.href).split("=")[1];
 console.log(domain)
-$('#domain').text(domain);
+if(domain=="logical")
+$('#domain').text('Logical Reasoning');
+else if(domain=="programming")
+$('#domain').text('Programming MCQ');
+else if(domain=="general")
+$('#domain').text('General Knowledge');
+else if(domain=="quantitative")
+$('#domain').text('Quantitative Aptitude');
+
 eval('var dom='+domain);
 $('#domain').after('<div id="submitdiv"><input type="submit" value="submit" id="submit"></div></form>')
 dom.map((d,i)=>
@@ -49,7 +57,7 @@ $("form").on("submit", function(e)
 		})
 		
 		$('#scorepic').text(score+'/10');
-		if(score<1)
+		if(score<5)
 		{
 			$('#scoreimg').attr('src','https://media1.tenor.com/images/c60b0c9f441f523e67e64afc52bec690/tenor.gif?itemid=8665326');
 		}
