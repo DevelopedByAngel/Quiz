@@ -17,9 +17,9 @@ dom.map((d,i)=>
 		$('#domain').after(
 		'<h3 class="question" id="question'+i+'">'+(dom.length-i)+') '+d.question+'</h3>'+
 		'<fieldset class="options" >'+
-		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[0]+'" ><label for="q'+i+'">'+d.options[0]+'</label></div><br>'+
-		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[1]+'" ><label for="q'+i+'">'+d.options[1]+'</label></div><br>'+
-		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[2]+'" ><label for="q'+i+'">'+d.options[2]+'</label></div><br>'+
+		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[0]+'" required="required" ><label for="q'+i+'">'+d.options[0]+'</label></div><br>'+
+		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[1]+'" required="required"><label for="q'+i+'">'+d.options[1]+'</label></div><br>'+
+		'<div class="q'+i+' option"><input type="radio" name="q'+i+'" value="'+d.options[2]+'" required="required"><label for="q'+i+'">'+d.options[2]+'</label></div><br>'+
 		'</fieldset>'
 		);
 	});

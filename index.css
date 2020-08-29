@@ -66,3 +66,13 @@ a:hover
 	justify-content:center;
 	padding:10%;
 }
+.card
+{
+	border:3px solid white;
+	border-radius:10px
+}
+.card img
+{
+border:3px solid transparent;
+	border-radius:10px	
+}
