@@ -1,13 +1,14 @@
 const domain=(window.location.href).split("=")[1];
 console.log(domain)
 if(domain=="logical")
-$('#domain').text('Logical Reasoning');
-else if(domain=="programming")
-$('#domain').text('Programming MCQ');
-else if(domain=="general")
-$('#domain').text('General Knowledge');
-else if(domain=="quantitative")
-$('#domain').text('Quantitative Aptitude');
+{
+$('#domain').text('Logical Reasoning');$('title').text('Logical Reasoning')}
+else if(domain=="programming"){
+$('#domain').text('Programming MCQ');$('title').text('Programming MCQ')}
+else if(domain=="general"){
+$('#domain').text('General Knowledge');$('title').text('General Knowledge')}
+else if(domain=="quantitative"){
+$('#domain').text('Quantitative Aptitude');$('title').text('Quantitative Aptitude')}
 
 eval('var dom='+domain);
 $('#domain').after('<div id="submitdiv"><input type="submit" value="submit" id="submit"></div></form>')
