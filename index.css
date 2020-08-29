@@ -12,7 +12,7 @@
 }
 .titleholder
 {
-	background:red;
+	background:#788c9c;
 	width:100%;
 	position:absolute;
 	display:flex;
@@ -37,4 +37,32 @@
 {
 	font-size:2.5rem;
 	text-align:center;
+}
+body
+{
+	background-color:black;
+}
+#nav
+{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+h1
+{
+	color:white;
+}
+a
+{
+	color:grey;
+}
+a:hover
+{
+	color:grey;
+}
+#header
+{
+	display: flex;
+	justify-content:center;
+	padding:10%;
 }

@@ -7,9 +7,12 @@ $('.card').on('click',function()
 });
 $(window).resize(function()
 	{
-		$('.titleholder').css('height',$('.card').css('height'))
+		$('.titleholder').css('height',$('.card').css('height'));
+		$('.card img').css("height",$('.titleholder').css('height'))
 	});
 $(document).ready(function()
 	{
 		$('.titleholder').css('height',$('.card').css('height'))
+				$('.card img').css("height",$('.titleholder').css('height'))
+
 	});
