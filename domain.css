@@ -118,9 +118,13 @@ border-color: #007bff;
 {
 	font-size: 4rem
 }
+#modalclose
+{
+	display: none
+}
 #scoreholder
 {
-	display:none;
+	/*display:none;*/
 }
 .score
 {

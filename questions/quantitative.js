@@ -26,16 +26,34 @@ options:['35','36','54']  ,
 answer:'54'
 
 },
-// {
-// question:" ",
-// options:[' ',' ',' ']  ,
-// answer:' '
+{
+question:"In how many different ways can the letters of the word 'LEADING' be arranged in such a way that the vowels always come together? ",
+options:['360','480','720']  ,
+answer:'720'
 
-// },
-// {
-// question:" ",
-// options:[' ',' ',' ']  ,
-// answer:' '
+},
+{
+question:"The H.C.F. of two numbers is 23 and the other two factors of their L.C.M. are 13 and 14. The larger of the two numbers is:",
+options:['276','322','299']  ,
+answer:'322'
 
-// }
+},
+{
+question:"If log 2 = 0.3010 and log 3 = 0.4771, the value of log5 512 is:",
+options:['2.870','3.912','3.876']  ,
+answer:'3.876'
+
+},
+{
+question:"A clock is started at noon. By 10 minutes past 5, the hour hand has turned through:",
+options:['155°','150°','60°']  ,
+answer:'155°'
+
+},
+{
+question:"A boat can travel with a speed of 13 km/hr in still water. If the speed of the stream is 4 km/hr, find the time taken by the boat to go 68 km downstream.",
+options:['2 hours','4 hours','3 hours']  ,
+answer:'4 hours'
+
+}
 ]

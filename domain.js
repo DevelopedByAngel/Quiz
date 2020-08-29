@@ -17,7 +17,7 @@ dom.map((d,i)=>
 // $('#domain').after('<form>')
 $("form").on("submit", function(e)
 	{
-		$('#scoreholder').css("display","block");
+		$('#modalbtn').click();
 		$(document).scrollTop($(document).height()+100); 
 		$('.score').text(' ');
 		$('#scoreholder').html('<img id="scoreimg" width="200" height="200" src="..."><div id="scorediv"><p id="scorepic"></p></div>');
@@ -63,6 +63,7 @@ $("form").on("submit", function(e)
 function results()
 		{
 			document.documentElement.scrollTop = 0;
+			$('#modalclose').click();
 		}
 $('.option').click(function()
 	{

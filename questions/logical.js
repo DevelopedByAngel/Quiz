@@ -28,4 +28,30 @@ question:" Window is to pane as book is to",
 options:['novel','cover','page']  ,
 answer:'page'
 
-}]
+},
+{
+	question:"Which word does NOT belong with the others?",
+	options:['tulip','bud','rose'],
+	answer:'rose'
+},
+{
+	question:"QAR, RAS, SAT, TAU, _____",
+	options:['UAV','UAT','TAS'],
+	answer:'UAV'
+},
+{
+	question:"Harvest(choose related word)",
+	options:['autumn','stockpile','Crop'],
+	answer:'Crop'
+},
+{
+	question:"school(choose related word)",
+	options:['report card','student','learning'],
+	answer:'student'
+},
+{
+	question:"Yard is to inch as quart is to",
+	options:['gallon','ounce','milk'],
+	answer:'ounce'
+},
+]

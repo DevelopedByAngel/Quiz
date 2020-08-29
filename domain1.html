@@ -2,13 +2,17 @@
 <html>
 <head>
 	<title>Domain</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="domain.css">
+
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
+	
 
 	<div id="content">
 		<form>
@@ -17,14 +21,38 @@
 			</div>
 		
 	</div>
-	<div id="scoreholder">
+	<button type="button" class="btn btn-primary" id="modalbtn"data-toggle="modal" data-target="#staticBackdrop">
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Quiz Result</h5>
+      </div>
+      <div class="modal-body">
+        <div id="scoreholder">
 		<img id="scoreimg" width="200" height="200" src="...">
 		<div id="scorediv"><p id="scorepic"></p></div>
 	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modalclose" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
 		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="questions/quantitative.js"></script>
+<script type="text/javascript" src="questions/general.js"></script>
+<script type="text/javascript" src="questions/programming.js"></script>
 <script type="text/javascript" src="questions/logical.js"></script>
 <script type="text/javascript" src="domain.js"></script>
 </body>
